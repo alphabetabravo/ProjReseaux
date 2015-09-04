@@ -1,0 +1,249 @@
+\documentclass[a4paper,12pt,oneside]{report}
+\usepackage[latin1]{inputenc}
+\usepackage{verbatim} 
+\usepackage{aeguill}
+\usepackage{amsfonts}
+\usepackage{xspace}
+\usepackage{amsmath}
+\usepackage{textcomp} 
+\usepackage{cancel} 
+\usepackage{mathcomp} 
+\usepackage{makeidx}
+\usepackage{lscape}
+\usepackage{fancybox}
+\usepackage{shapepar}
+\usepackage{fancyhdr}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{supertabular}
+\usepackage{ifsym}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{upgreek}
+\usepackage[english,french]{babel}
+\usepackage[pdftex]{graphicx, color}
+\usepackage{pdfpages}
+\graphicspath{{img/}}
+\DeclareGraphicsExtensions{.jpg,.png}
+\pdfoutput=1
+\usepackage[pdftex,
+	a4paper,
+    bookmarks = true,           % Signets
+    bookmarksnumbered = true,   % Signets numerotes
+    pdfpagemode = None,         % Signets/vignettes fermes a l'ouverture
+    %pdfstartview = FitH,        % La page prend toute la largeur
+	pdfstartview = FitV,        % La page prend toute la hauteur
+	colorlinks=true,
+	citecolor=black,urlcolor=blue,linkcolor=red,
+	pdfauthor={Rémi Mollard},
+	pdftitle={overview reseaux},
+ 	pdfsubject={rogueAp},
+	pdfkeywords={},
+	plainpages=false,
+	pdfpagelabels,
+	bookmarks,
+	breaklinks=true,
+   	hyperindex,
+	linktocpage=true
+]{hyperref}
+\pdfcompresslevel=9
+\urlstyle{sf}
+
+%%%  Pour mettre en forme Chapitre %%%
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \ifnum \c@secnumdepth >\m@ne
+        \Huge\bfseries \thechapter\quad
+    \fi
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+%
+\def\@makeschapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+%%% Reglage des marges
+\setlength{\hoffset}{-25pt}  	
+\setlength{\voffset}{-18pt}  	
+\setlength{\oddsidemargin}{50pt} 	% Marge gauche sur pages impaires
+\setlength{\evensidemargin}{9pt} 	% Marge gauche sur pages paires
+\setlength{\marginparwidth}{54pt} 	% Largeur de note dans la marge
+\setlength{\textwidth}{420pt} 	% Largeur de la zone de texte (17cm)
+\setlength{\marginparsep}{7pt} 	% Séparation de la marge
+\setlength{\topmargin}{0pt} 	% Pas de marge en haut
+\setlength{\headheight}{33pt} 	% Haut de page
+\setlength{\headsep}{40pt} 	% Entre le haut de page et le texte
+\setlength{\paperwidth}{600pt}
+\setlength{\footskip}{27pt} 	% Bas de page + séparation
+\setlength{\textheight}{650pt} 	% Hauteur de la zone de texte 
+%
+
+%%%% debut macro %%%%
+\newenvironment{changemargin}[2]{\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0pt}%
+\setlength{\rightmargin}{0pt}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{0pt plus 1pt}%
+\addtolength{\leftmargin}{#1}%
+\addtolength{\rightmargin}{#2}%
+}\item }{\end{list}}
+%%%% fin macro %%%%
+
+
+\pagestyle{fancy} %éviter le style par défaut.
+\fancyhead[LO]{\textsc{\rightmark} \rule[0.5ex]{\textwidth}{0.4mm}}
+\fancyfoot[R]{\footnotesize{\textsc{Aperçu projet}}}	
+\fancyfoot[C]{\footnotesize{- \thepage} -}	
+\fancyfoot[L]{\footnotesize{\Laserbeam\ \textit{ENSIBS - Cyber2}}}	
+%%% Ajouter une fine ligne en haut et en bas
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+%%%%%%%%% Mise en Forme page de garde %%%%%%%%%%%%%%%%%%%%
+%######################## Définition du titre ######################
+\title{
+\thispagestyle{empty}
+\vspace{-40mm}
+   \begin{minipage}[c][160pt][c]{.42\linewidth} %[hauteur][position]{largeur}
+	{\normalsize 
+		\begin{flushleft}
+		\vspace{3mm}
+		Enseignement des réseaux\\
+		Universitée de Bretagne-Sud\\
+		Formation ingénieur cyberdéfense\\
+		\url{http://www-ensibs.univ-ubs.fr/}\\
+		\vspace{2mm}
+		\includegraphics[width=7cm]{./img/ENSIBS_Logo}
+		\vspace{3mm}
+		\end{flushleft}
+	}
+   \end{minipage}\hfill
+\hspace{15mm}
+   \begin{minipage}[c][160pt][c]{.42\linewidth} %[hauteur][position]{largeur}
+	{\normalsize 
+		\begin{flushright}
+		\vspace{3mm}
+		Liebhardt Jérémie\\
+		Mollard Rémi\\
+		Coueron Adrien\\
+		Gambart Thomas\\
+		Année 2015\\
+		\vspace{30mm}
+		\end{flushright}
+	}
+   \end{minipage}
+\vfill
+\vspace{30mm}
+%
+%
+   {\Huge \textsc{Apperçu projet réseau}}\\
+\vspace{6mm}
+%\Ovalbox{
+\rule{\linewidth}{0.8mm}\vspace{6mm}\\
+    \begin{minipage}[c]{0.70\linewidth} %[hauteur][position]{largeur}
+	{\Huge
+		Installation et configuration 
+		d'un rogue access point
+	}
+	\vspace{6mm}
+   \end{minipage}
+\rule{\linewidth}{0.8mm}\vspace{3mm}\\
+%}
+%
+\vspace{5cm}
+%
+   \begin{minipage}[c]{.46\linewidth}
+	{\normalsize 
+		\begin{flushleft}
+		\vspace{2mm}
+		\end{flushleft}
+	}
+   \end{minipage}\hfill
+%
+   \begin{minipage}[c]{.46\linewidth}
+	{\normalsize 
+		\begin{flushright}
+		Enseignant\\
+		\vspace{2mm}
+		\textsc{Maël Auzias}\\
+		\end{flushright}
+	}
+   \end{minipage}
+\date{} % Je ne veux pas afficher la date
+}  %fin du titre
+
+\author{}
+
+
+\makeatletter
+\renewcommand{\@makefntext}[1]%
+{\noindent\llap{\@makefnmark\,}#1}
+\renewcommand{\footnoterule}{\vspace*{-3pt}%
+\noindent
+\hspace*{-1em}
+\rule{.4\columnwidth}{0.4pt}\vspace*{2.6pt}}
+\makeatother
+
+
+
+%
+%%%%%%%%%%%%%%%% Fin des includes... %%%%%%%%%%%%%
+
+\selectlanguage{french}
+\makeindex
+\begin{document}
+\setlength{\headheight}{33pt} 	% Haut de page
+\setlength{\headsep}{20pt} 	% Entre le haut de page et le texte
+\setlength{\textheight}{950pt} 	% Hauteur de la zone de texte 
+
+%%
+\maketitle
+\pagestyle{plain}
+\renewcommand{\headrulewidth}{0pt}
+
+\setcounter{page}{1} %On definit un compteur a 1
+\pagenumbering{roman} %permet une numérotation en chiffre romain
+\cleardoublepage
+
+
+\setlength{\headheight}{33pt} 	% Haut de page
+\setlength{\headsep}{40pt} 	% Entre le haut de page et le texte
+\setlength{\textheight}{650pt} 	% Hauteur de la zone de texte 
+
+\setcounter{page}{1} % On réinitialise le coompteur des pages
+\pagenumbering{arabic} % On repasse en numérotation en chiffre Arabe 
+\fancypagestyle{plain}{
+\fancyhead[LO]{}
+\fancyhead[R]{}
+}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{3pt}
+
+\input{./source/intro} %% INTRODUCTION
+%\input{./source/GNU} %% Outils de developpement
+%\input{./source/Mesure} %%  ----- TRAVAUX RÉALISÉS
+%\input{./source/Transmission} %% -----
+%\input{./source/USB} %% -----
+%\input{./source/perso} %% IMPRESSIONS PERSONNELLES 
+%\input{./source/Conclusion} %% CONCLUSION
+
+\pagestyle{plain}
+
+\renewcommand{\headrulewidth}{0pt}
+\cleardoublepage
+\thispagestyle{empty}
+\end{document}

@@ -1,0 +1,256 @@
+http://doc.ubuntu-fr.org/conception_electronique
+ 
+UNIX CAO google
+http://groups.google.fr/group/fr.sci.electronique/msg/b5a87cbc42e6a71b
+
+
+
+gEDA
+-------------------------------------------
+http://www.iznogood-factory.org/pub/gEDA/tutorialfr.html
+
+http://www.geda.seul.org/wiki/geda:usage.fr
+" Habituellement, les utilisateurs invoquent les outils individuels depuis la ligne de commande. Un gestionnaire de projet (« geda ») existe mais a besoin d'être amélioré."
+
+
+
+
+probleme de "undo" et zoom seulemetn sur gschem.. OK pour pcb
+
+
+
+
+
+gScheam
+----------------------------------------------
+
+
+
+
+
+
+
+
+
+une fois le schema fini, verifier avec le DRC..
+$ gnetlist -g drc2 Recepteur.sch -o -
+pour avoir le résultat dans le shell
+
+alors que 
+$ gnetlist -g drc2 Recepteur.sch -o drc_output.txt
+pour sortir en fichier...
+
+
+
+puis quand plus d'erreur..
+$ gsch2pcb Recepteur.sch
+ou avec l'option verbose
+$ gsch2pcb -v Recepteur.sch
+
+si les erreurs pesistent, 
+pour voir les repertoirs de recherche de lib:
+$ gsch2pcb -v -v Recepteur.sch
+
+
+apres
+citation shell
+
+
+Next step:
+1.  Run pcb on your file Recepteur.pcb.
+    You will find all your footprints in a bundle ready for you to place
+    or disperse with "Select -> Disperse all elements" in PCB.
+
+2.  From within PCB, select "File -> Load netlist file" and select 
+    Recepteur.net to load the netlist.
+
+3.  From within PCB, enter
+
+
+
+
+
+Si il s'agit d'une MAJ :
+
+Next steps:
+1.  Run pcb on your file Recepteur.pcb.
+2.  From within PCB, select "File -> Load layout data to paste buffer"
+    and select Recepteur.new.pcb to load the new footprints into your existing layout.
+3.  From within PCB, select "File -> Load netlist file" and select 
+    Recepteur.net to load the updated netlist.
+
+4.  From within PCB, enter
+           :ExecuteFile(Recepteur.cmd)
+(enfoncer la touche ":" pour l'invite de commande)
+
+ensuite presser "O" ou connect/optimise rats net
+quand on deplace un composant, les fils ne suivent pas
+c'est nul...
+
+
+Attention, pas les meme raccourcit entre les different prog..
+- Si on deplace le compo sans le selectionner les connections suivent... si on le selectionne auparavant
+elles sont rompus!!
+
+
+
+
+
+Pour remettre a jour:
+si le schema a changé...
+refaire al netlist, et gsch2pcb
+dans PCB (avec le layout ouvert) load layout data to past buffer
+et c'est tout bon !!!
+avec un petit 
+Recepteur.cmd
+et "O"
+
+
+
+problemes erreur TYPE pour DRC:
+
+Checking nets with only one connection...
+ERROR: Net 'unnamed_net23' is connected to only one pin: U5:20 
+prob rencontré avec les condensateurs.... mais avec deux meme schema, pas au meme endroit!!
+
+Checking slots...
+ERROR: Reference U5: Slot out of range (1).
+slotnumber = 1
+
+POUR passer outre... effacer, recommancer etc :s
+qui dit mieux?
+Verifier les value, refdes, footprint ...
+
+
+Pbc
+---------------------------------------------------------
+http://pcb.sourceforge.net/manual.html
+http://ofset.sourceforge.net/freeduc/book/book_29.html
+PCB : attention quand ca plante...
+epaisseur des pistes.. etc
+supprimer plussieurs obkets: shift clic droit...
+Outils lock : locker l'objet...
+http://www.iznogood-factory.org/pub/gEDA/land_patterns_fr.pdf
+creer des empreintes en Fr
+gEDA ajouter conseille pland e masse (activer new lines, arc clear polygone)...
+appliquer a toute les pistes e, les selectionnant + shift J
+la commande ne fonctionne pas
+pcb attention en créant les fp, les minuscules (à la fin) sont reservée pour les portes a l'interieurs des compo...
+elle seront ignorée
+
+
+
+Quelles ressources existent pour traiter les fichiers PCB en utilisant les scripts?
+
+Une des plus grande fonctionnalité de PCB est qu'il utilise un format de fichier ASCII facilement compréhensible. C'est la raison pour laquelle de nombreues personnes utilisent les scripts (habituellement Perl) pour traiter leurs cartes de différentes manières. Vous pouvez utiliser ces scripts soit comme ils sont, soit en les modifiant pour les adapter à nos propres buts. Vous avez ici quelques liens vers les scripts disponibles:
+
+   1.
+      John Luciani possède une large éventail de scripts disponible sur son site web. Dans cette collection, des scripts sont inclus pour générer des empreintes, de même que
+   2.
+      David Rowe possède des scripts pour mettre à jour des éléments de même qu'ajouter/suprimer des fichiers PCB les uns des autres sur son site web.
+   3.
+      Stuart Brorson a écrit un script simple qui génère des empreintes pour deux ponts thermiques passifs en SMD. Un tarball gzippé est disponible ici .
+
+
+
+
+
+
+quand on creer une emprinte elle arrive dans le repertoir du projet....
+
+
+
+http://pcb.sourceforge.net/manual.html
+http://pcb.sourceforge.net/manual.html
+http://pcb.sourceforge.net/manual.html
+http://pcb.sourceforge.net/manual.html
+
+
+remplacer pcb par Pcb.
+ce qui ets dépassé comme tuto c'est ceux traitant de tout...
+celui de gschem OK et pcb encore mieux ;:)
+
+
+
+
+
+modifier empreinte
+l'ouvrir (window/lib) 
+selectionner piece, 
+buffer/copie selection to buffer
+buffer/convert buffer element to piece
+
+faire les modif
+selectionner piece, 
+buffer/copie selection to buffer
+buffer/convert buffer piece to element
+si probleme de pin (mauvaise face par exemle)
+selectionner piece, 
+buffer/copie selection to buffer
+buffer/convert buffer element to piece
+pas faire de modif
+selectionner piece, 
+buffer/copie selection to buffer
+buffer/convert buffer piece to element
+
+et voila...
+
+pour creer une piece, presque pareil..
+
+# Buffer->cut selection to buffer et déplacez le curseur au centre du via de gauche et cliquez.
+# Buffer->convert buffer to element
+# Buffer->save buffer elements to file, 
+
+
+
+Attention aux tutos dépassés !!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+LINUX >> ce qu'il faut pour programmer un PIC18
+
+http://pikdev.free.fr/     compilateur C, Cpik  pour les PIC18
+
+
+
+INSTALLATION progs.. LOG
+Kicad
+telecharger la derniere version la ftp://iut-tice.ujf-grenoble.fr/cao/ 
+$ cd /usr/local/
+# tar xzvf kicad-2007-01-15.tgz    (dans /usr/local/)
+$ cd kicad/linux/
+$ ./kicad
+test
+creer un raccourcit avec pour commande /usr/local/kicad/linux/kicad
+http://www.kicadlib.org/
+
+
+SDCC
+http://pikdev.free.fr/download.php3
+on peut trouver la derniere version ici:
+http://srl.cs.jhu.edu/YUM/fedora/extras/6/x86_64/
+> rpm -Uvh sdcc-2.6.0-9.fc6.x86_64.rpm
+
+
+
+
+
+PIKLAB est obligatoire! !!! plusieurs outil pouvant etre intégrés.. certain tournent avec Wine
+
+
+
+
+
+

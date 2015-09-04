@@ -1,0 +1,62 @@
+\chapter{Le CERN}
+\thispagestyle{fancy}
+
+\section{Présentation}
+
+Le Centre Européen pour la Recherche Nucléaire (CERN) est l'un des plus prestigieux centres de recherche fondamentale du monde.
+                                   
+Créé en 1954 pour assembler les plus grands chercheurs Européens, il est l'investigateur de grandes technologies telle qu'Internet ou la supraconductivitée. La Cryogénie est également un domaine dans lequel le CERN inove.\newline
+
+Le CERN est devenu l'Organisation Européenne pour la Recherche Nucléaire. Le but étant de fournir les outils dont les physiciens du monde entier ont besoins. Par des accélérateurs de particules associées à leurs détecteurs ils annalysent les collisions entre particules élementaires.
+
+La mise en commun des données à exploiter par les physiciens du monde entier est le point de départ  de la création d'Internet. Maintenant, un nouveau système se met en place. La Grille.
+
+\og La grille nous permet de combiner la puissance de centres de calcul scientifiques, o\` u qu'ils soient, pour fournir la ressource informatique la plus puissante que puisse offrir le monde \fg\ indique Ian Bird, chef du déploiement de la grille au CERN. Grâce au réseau de fibres optique, il n'y aura pas de temps de latence pour les transferts de données entre ordinateur.
+
+Cette infrastructure permettra de traiter les 14 pétaoctets générés chaques années par le nouvel accélérateur (LHC). Cela équivaut à plus de vingt millions de cédéroms. Il est prévut pour être opérationnel fin 2007. Pour exploiter toutes ces données, il faut une puissance de calcul éuivalente à \nombre{70000} ordinateurs personnels, les plus rapides de l'époque actuelle. \newline
+
+Ce laboratoire européen pour la physique des particules s'est ouvert à beaucoup de pays. Ses \' Etats membres sont les suivants: Allemagne, Autriche, Belgique, Danemark, Espagne, Finlande, France, Grèce, Hongrie, Italie, Norvège, Pays- Bas, Pologne, Portugal, la République slovaque, la République tchèque, Royaume-Uni, Suède et Suisse. La Fédération de Russie, Israël, la Turquie, la Yougoslavie (le statut d'observateur est suspendu après l'embargo de l'ONU, juin 1992), la Commission des Communautés européennes et l'UNESCO ont le statut d'observateur.
+
+%%%%%%%%%%%%%%%%%%%%%%%% http://press.web.cern.ch/Press/PressReleases/Releases2003/PR13.03FLCG-1.html  en bibliograohie
+%spécifier qu'il y a  X accelerateur, + beau dessin
+\section{Situation actuelle}
+Pour accélérer les particules, il existe des accélérateurs linéaires et circulaire. \` A technologie égale, plus ils sont long, plus ils sont puissants. C'est pourquoi le CERN dispose de quatre accélérateurs circulaires et quelques accélérateurs linéraires. Ces derniers servent lancer les particules dans un premier accélérateur de particule circulaire, pour que sa vitesse augmente. Le faisceau de particules effectue quelque tours, de plus en plus rapidement. Une fois atteint la vitesse limite de l'accélérateur, il est injécté dans l'accélérateur suivant. C'est ainsi qu'en cascadant plusieurs accélérateur, que le faisceaux peut atteindre une énergie de 14~TeV\footnote{1 \' ElectronVolt correspond à $ \nombre{1,602 176 53}  \times 10^{-19} $~Joules} . Le LHC accélérera des protons jusqu'à 7~TeV,l'energie d'un moustique en plein vol, soit \nombre{0.999999991} fois la vitesse de la lumière !\newline
+
+Il y a principalement trois accélérateurs circulaires :
+
+Le PS pour Proton Synchrotron amène les particules à 25 GeV. Ensuite le SPS (Super Proton Synchrotron) produit une énergie de 450~GeV. Pour enfin aboutir au LHC et ses 7~TeV. Les particules accélérées peuvent être des protons et des anti-protons. Mais aussi des ions de plomb. \` A l'heure actuelle, l'énergie maximale atteinte dans un accélérateur de particules est de 2 TeV (collisionneur proton anti-proton installé au laboratoire Fermilab près de Chicago).
+
+\begin{center}
+\begin{figure}
+    \includegraphics[width=10cm]{./img/LHCps}
+    \caption{Organisation des accélérateurs}
+\end{figure}
+\end{center}
+L'ancien plus grand accélerateur du CERN, le LEP à été entièrement démonté. Actuellement, le montage du nouveau est bientôt achevé. Il s'agit du LHC, pour Large Hadron Collider, l'entreprise scientifique la plus ambitieuse que le monde ait jamais connue. Il va permettre des collision frontales de faisceaux de protons à une énergie de 14~Tev (contre seulement 7~TeV pour le LEP et ses faisceaux d'électrons). En effet, la masse d'un proton est presque deux-milles fois plus élevée que celle d'un électron. Ce qui augmente considérablement son énergie à vitesses égales.
+
+Pas moins de \nombre{7000} scientifiques d'universités et de laboratoires du monde entier s'en serviront pour apporter des réponses aux questions les plus fondamentales de la science. \newline
+
+Pour augmenter ainsi la puissance tout en gardant la même circonférence pour l'anneaux (27~km de diamètres) il leur faut plonger les aimant accélérant le faisceaux dans un bain d'helium liquide. Ainsi ils attaignent des températures de refroidissement de l'ordre de 1.9~K (soit -271 \degres C). C'est ainsi que le secteur 7-8 (un huitième de l'accélérateur) à atteind une température inférieur à celle de l'espace intersidéral le 10 avril 2007. C'est la plus grande installation supraconductrice du monde.\newline
+%%%http://fr.wikipedia.org/wiki/Organisation_europ%C3%A9enne_pour_la_recherche_nucl%C3%A9aire%%%%%%%%%ù verifier la puissance du LEP pour comparer.
+
+
+
+Le CERN, avec plus de \nombre{3000} employés, est une très grande organisation. Divisé en plusieurs départements, les différents domaines d'activités sont regroupés par expériences (CMS\footnote{Compact Muon Spectrometer}, ATLAS\dots) ou par compétences. Par exemple HR\footnote{Ressources Humaines} ou AB\footnote{Faisceaux et Accélérateurs}.\newline
+
+Mon stage s'est déroulé chez AB-CO-HT (Accelerator and Beams Control -- Hardware and Timing).
+
+
+
+\section{Département AB-CO}
+
+\subsection{Contrôle}
+la salle de contrôle, l'organisation, la centralisation ..
+
+\subsection{HT}
+
+Il est composé d'une douzaine de personnes travaillant sur le contrôle du bon déroulement des opérations.
+Le Timing permet de synchroniser toutes les opérations au sein du CERN, pour ainsi être de plus en plus précis.
+La partie Contrôle permet de connaître l'état des appareils à chaque instant et de prévenir toutes pannes.
+En effet, si un aimant vient à dysfonctionner, le faisceau de particules ne sera plus concentré et canaliser. Il va complètement pulvériser la matière se trouvant sur son chemin, ce qui amène à de grosses réparations et plusieurs mois d'inactivité des accélérateurs.
+%De plus le prix d'un aimant du LHC s'élève à \hl{plusieurs million de Francs suisse}.
+C'est pourquoi la norme qualité en vigueur au CERN est la SIL3. Par comparaison, pour les avions du SIL4 est éxigé.

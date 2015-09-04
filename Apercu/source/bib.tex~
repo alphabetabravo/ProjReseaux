@@ -1,0 +1,32 @@
+\chapter*{Bibliographie}
+\addcontentsline{toc}{chapter}{Bibliographie}
+%%%%%%%%%%%%%%%% spécifier les langues???
+
+\url{http://press.web.cern.ch/}, toutes les nouvelles du CERN, toutes les données et dates importantes.
+
+\url{http://fr.wikipedia.org/}, diverses définitions.
+
+\url{http://www.iut-lannion.fr/LEMEN/MPDOC/CMMEST/mtherres.htm}, mesure de température.
+
+\url{http://aviatechno.free.fr/thermo/rtd03.php},mesure de température.
+
+\url{http://perso.orange.fr/michel.hubin/physique/elec/chap_aop2.htm}, divers schémas électroniques. 
+
+\url{http://forums.futura-sciences.com/forum40.html}, un forum avec des sujets interréssants sur la Pt100.
+
+\url{http://www.planete-sciences.org/forums/}, forum très intéressant sur l'utilisation du module Xbee. Voir section Robotique.
+
+\url{http://www.jeffreyleblanc.org/energy/xbee.htm}, sources pour les commandes AT du module Xbee.
+
+\url{http://www.todopic.com.ar/foros/index.php?topic=16393.0;topicseen}, un bon exemple sur l'utilisation du module Xbee.
+
+\url{http://www.totofweb.net/}, un beau projet avec le module Xbee.
+
+\url{http://itp.nyu.edu/~raf275/meshnetworking/XBee/XBee_firmware_upgrade.html}, des explications sur la mise à jour du module Xbee ("~upgrading firmware~").
+
+\url{http://pic18fusb.online.fr/}, les PIC pour l'USB en HID.
+
+\url{http://www.analog.com/UploadedFiles/Associated_Docs/49470200sscsect2.PDF}, un dossier très intéressant en rapport avec le pont de Wheatstone et la Pt100. Dommage que je ne l'ai trouvé qu'à la fin, il m'a permis de vérifié mon schéma, puisqu'il est reproduit à l'identique (page 11 figure 2.12).
+
+\url{http://lpm.epfl.ch/webdav/site/lpm/shared/enseignement/divers/060914\%20Mesure\%20de\%20température\%20Pt100-Pt1000.pdf}, un dossier permettant d'ajuster l'erreur de l'ajustement quadratique standard pour les températures négatives.
+
