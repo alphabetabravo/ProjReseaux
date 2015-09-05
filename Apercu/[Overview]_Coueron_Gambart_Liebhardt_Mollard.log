@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.4)  4 SEP 2015 22:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=latex 2015.9.4)  5 SEP 2015 02:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,20 +6,19 @@ entering extended mode
 (./[Overview]_Coueron_Gambart_Liebhardt_Mollard.tex
 LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@chapter=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -87,13 +86,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count88
+\inf@bad=\count87
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count89
-\leftroot@=\count90
+\uproot@=\count88
+\leftroot@=\count89
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count91
-\DOTSCASE@=\count92
+\classnum@=\count90
+\DOTSCASE@=\count91
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -102,15 +101,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen105
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count93
-\c@MaxMatrixCols=\count94
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
-\c@parentequation=\count95
-\dspbrk@lvl=\count96
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
 \tag@help=\toks20
-\row@=\count97
-\column@=\count98
-\maxfields@=\count99
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
 \andhelp@=\toks21
 \eqnshift@=\dimen106
 \alignsep@=\dimen107
@@ -232,18 +231,10 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: dvips.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count100
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2010/05/15 1.4
@@ -263,9 +254,9 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 Package: shapepar 2013/03/26 v 2.2x, Shaped paragraphs
 \SH@scale=\dimen113
 \SH@boxb=\box30
-\SH@ntries=\count101
+\SH@ntries=\count99
 \spec@bot=\dimen114
-\sqrtcount=\count102
+\sqrtcount=\count100
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip47
@@ -283,7 +274,7 @@ Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 )
 (/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count103
+\c@tracingst=\count101
 \ST@wd=\dimen115
 \ST@rightskip=\skip56
 \ST@leftskip=\skip57
@@ -305,18 +296,18 @@ Package: ifsym 2000/04/18 I.Kloeckl
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count104
-\calc@Bcount=\count105
+\calc@Acount=\count102
+\calc@Bcount=\count103
 \calc@Adimen=\dimen126
 \calc@Bdimen=\dimen127
 \calc@Askip=\skip59
 \calc@Bskip=\skip60
 LaTeX Info: Redefining \setlength on input line 75.
 LaTeX Info: Redefining \addtolength on input line 76.
-\calc@Ccount=\count106
+\calc@Ccount=\count104
 \calc@Cskip=\skip61
 )
-\c@ifsymcnt=\count107
+\c@ifsymcnt=\count105
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
@@ -324,16 +315,16 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip63
 \LTpre=\skip64
 \LTpost=\skip65
-\LTchunksize=\count108
+\LTchunksize=\count106
 \LTcapwidth=\dimen128
 \LT@head=\box32
 \LT@firsthead=\box33
 \LT@foot=\box34
 \LT@lastfoot=\box35
-\LT@cols=\count109
-\LT@rows=\count110
-\c@LT@tables=\count111
-\c@LT@chunks=\count112
+\LT@cols=\count107
+\LT@rows=\count108
+\c@LT@tables=\count109
+\c@LT@chunks=\count110
 \LT@p@ftn=\toks28
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
@@ -341,23 +332,23 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks29
 )
-\lst@mode=\count113
+\lst@mode=\count111
 \lst@gtempboxa=\box36
 \lst@token=\toks30
-\lst@length=\count114
+\lst@length=\count112
 \lst@currlwidth=\dimen129
-\lst@column=\count115
-\lst@pos=\count116
+\lst@column=\count113
+\lst@pos=\count114
 \lst@lostspace=\dimen130
 \lst@width=\dimen131
-\lst@newlines=\count117
-\lst@lineno=\count118
+\lst@newlines=\count115
+\lst@lineno=\count116
 \lst@maxwidth=\dimen132
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count119
-\lst@skipnumbers=\count120
+\c@lstnumber=\count117
+\lst@skipnumbers=\count118
 \lst@framebox=\box37
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -367,14 +358,14 @@ Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2014/10/28 v1.8i multicolumn formatting (FMi)
-\c@tracingmulticols=\count121
+\c@tracingmulticols=\count119
 \mult@box=\box38
 \multicol@leftmargin=\dimen133
-\c@unbalance=\count122
-\c@collectmore=\count123
-\doublecol@number=\count124
-\multicoltolerance=\count125
-\multicolpretolerance=\count126
+\c@unbalance=\count120
+\c@collectmore=\count121
+\doublecol@number=\count122
+\multicoltolerance=\count123
+\multicolpretolerance=\count124
 \full@width=\dimen134
 \page@free=\dimen135
 \premulticols=\dimen136
@@ -405,14 +396,14 @@ Package: multicol 2014/10/28 v1.8i multicolumn formatting (FMi)
 \@tempa=\box59
 \@tempa=\box60
 \@tempa=\box61
-\c@columnbadness=\count127
-\c@finalcolumnbadness=\count128
+\c@columnbadness=\count125
+\c@finalcolumnbadness=\count126
 \last@try=\dimen139
 \multicolovershoot=\dimen140
 \multicolundershoot=\dimen141
 \mult@nat@firstbox=\box62
 \colbreak@box=\box63
-\mc@col@check@num=\count129
+\mc@col@check@num=\count127
 )
 (/usr/share/texlive/texmf-dist/tex/latex/was/upgreek.sty
 Package: upgreek 2003/02/12 v2.0 (WaS)
@@ -429,7 +420,7 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/09/25 3.9l Babel common definitions
-\babel@savecnt=\count130
+\babel@savecnt=\count128
 \U@D=\dimen142
 )
 \l@canadian = a dialect from \language\l@american 
@@ -442,16 +433,16 @@ Language: frenchb 2014/09/16 v3.1b French support from the babel system
 \l@canadien = a dialect from \language\l@french 
 \FBcolonskip=\skip68
 \FBthinskip=\skip69
-\FB@interchartokenstateORI=\count131
+\FB@interchartokenstateORI=\count129
 Package babel Info: Making : an active character on input line 371.
 Package babel Info: Making ; an active character on input line 372.
 Package babel Info: Making ! an active character on input line 373.
 Package babel Info: Making ? an active character on input line 374.
 \FBguillskip=\skip70
-\FBguill@level=\count132
+\FBguill@level=\count130
 \FB@Mht=\dimen143
-\std@mcc=\count133
-\dec@mcc=\count134
+\std@mcc=\count131
+\dec@mcc=\count132
 \listindentFB=\skip71
 \labelwidthFB=\skip72
 \leftmarginFB=\skip73
@@ -470,7 +461,35 @@ Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 137.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+
+! Package pdftex.def Error: PDF mode expected, but DVI mode detected!
+(pdftex.def)                If you are using `latex', then call `pdflatex'.
+(pdftex.def)                Otherwise check and correct the driver options.
+(pdftex.def)                Error recovery by switching to PDF mode.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433   }\@ehc
+              
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\Gread@gobject=\count133
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
+))
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
 
@@ -492,7 +511,7 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box64
 \AM@toc@title=\toks31
-\c@AM@survey=\count135
+\c@AM@survey=\count134
 \AM@templatesizebox=\box65
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -552,13 +571,13 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen147
-\Hy@linkcounter=\count136
-\Hy@pagecounter=\count137
+\Hy@linkcounter=\count135
+\Hy@pagecounter=\count136
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count138
+\Hy@SavedSpaceFactor=\count137
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -594,14 +613,14 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count139
+\c@Hy@tempcnt=\count138
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen148
-\Fld@menulength=\count140
+\Fld@menulength=\count139
 \Field@Width=\dimen149
 \Fld@charsize=\dimen150
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -613,17 +632,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count141
-\c@Item=\count142
-\c@Hfootnote=\count143
+\Hy@abspage=\count140
+\c@Item=\count141
+\c@Hfootnote=\count142
 )
 
 Package hyperref Message: Driver: hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count144
-\c@bookmark@seq@number=\count145
+\Fld@listcount=\count143
+\c@bookmark@seq@number=\count144
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -632,11 +651,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip74
 )
-\@indexfile=\write4
-\openout4 = `[Overview]_Coueron_Gambart_Liebhardt_Mollard.idx'.
-
-
-Writing index file [Overview]_Coueron_Gambart_Liebhardt_Mollard.idx
 (./[Overview]_Coueron_Gambart_Liebhardt_Mollard.aux)
 \openout1 = `[Overview]_Coueron_Gambart_Liebhardt_Mollard.aux'.
 
@@ -662,6 +676,10 @@ File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    ... okay on input line 208.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 208.
 LaTeX Font Info:    ... okay on input line 208.
+\c@lstlisting=\count145
+LaTeX Info: Redefining \degres on input line 208.
+LaTeX Info: Redefining \dots on input line 208.
+LaTeX Info: Redefining \up on input line 208.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -676,34 +694,16 @@ LaTeX Font Info:    ... okay on input line 208.
 \MPnumerator=\count150
 \makeMPintoPDFobject=\count151
 \everyMPtoPDFconversion=\toks33
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
-Package grfext Info: Graphics extension search list:
-(grfext)             [.jpg,.png,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-\c@lstlisting=\count152
-LaTeX Info: Redefining \degres on input line 208.
-LaTeX Info: Redefining \dots on input line 208.
-LaTeX Info: Redefining \up on input line 208.
 \AtBeginShipoutBox=\box67
 Package hyperref Info: Link coloring ON on input line 208.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count153
+\c@section@level=\count152
 )
 LaTeX Info: Redefining \ref on input line 208.
 LaTeX Info: Redefining \pageref on input line 208.
@@ -711,38 +711,38 @@ LaTeX Info: Redefining \nameref on input line 208.
 
 (./[Overview]_Coueron_Gambart_Liebhardt_Mollard.out)
 (./[Overview]_Coueron_Gambart_Liebhardt_Mollard.out)
-\@outlinefile=\write5
-\openout5 = `[Overview]_Coueron_Gambart_Liebhardt_Mollard.out'.
+\@outlinefile=\write4
+\openout4 = `[Overview]_Coueron_Gambart_Liebhardt_Mollard.out'.
 
-LaTeX Font Info:    Try loading font information for T1+aess on input line 215.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 214.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 215.
+LaTeX Font Info:    Try loading font information for U+msa on input line 214.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 215.
+LaTeX Font Info:    Try loading font information for U+msb on input line 214.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./img/ENSIBS_Logo.png, id=9, 922.44624pt x 246.9225pt>
+<./img/ENSIBS_Logo.png, id=5, 922.44624pt x 246.9225pt>
 File: ./img/ENSIBS_Logo.png Graphic file (type png)
 
 <use ./img/ENSIBS_Logo.png>
-Package pdftex.def Info: ./img/ENSIBS_Logo.png used on input line 215.
+Package pdftex.def Info: ./img/ENSIBS_Logo.png used on input line 214.
 (pdftex.def)             Requested size: 199.16928pt x 53.31335pt.
 
-Overfull \hbox (22.77005pt too wide) in paragraph at lines 215--215
+Overfull \hbox (22.77005pt too wide) in paragraph at lines 214--214
 [][] 
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 215--215
+Underfull \hbox (badness 1107) in paragraph at lines 214--214
 []\T1/aer/m/n/24.88 Installation et confi-gu-ra-tion
  []
 
@@ -765,34 +765,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--32
  []
 
 LaTeX Font Info:    Try loading font information for U+mvs on input line 47.
-(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)pdfTeX warning (ext4)
-: destination with the same identifier (name{page.1}) has been already used, du
-plicate ignored
-<to be read again> 
-                   \relax 
-l.47 \newpage
-              [1
+(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd) [2]) [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
 
-
-]) [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
- (./[Overview]_Coueron_Gambart_Liebhardt_Mollard.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 249.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 249.
+(./[Overview]_Coueron_Gambart_Liebhardt_Mollard.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
 Package rerunfilecheck Info: File `[Overview]_Coueron_Gambart_Liebhardt_Mollard
 .out' has not changed.
-(rerunfilecheck)             Checksum: 740DE597BE2964E58E84136CA6AD4CE0;48.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 249.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
  ) 
 Here is how much of TeX's memory you used:
- 11022 strings out of 493105
- 157099 string characters out of 6137073
- 260189 words of memory out of 5000000
- 14227 multiletter control sequences out of 15000+600000
- 47141 words of font info for 107 fonts, out of 8000000 for 9000
+ 11068 strings out of 493106
+ 157695 string characters out of 6137099
+ 258941 words of memory out of 5000000
+ 14282 multiletter control sequences out of 15000+600000
+ 45532 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,11n,43p,285b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,12n,43p,285b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
@@ -803,10 +795,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist
 /public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/marvosym/marvosym.pfb>
 Output written on [Overview]_Coueron_Gambart_Liebhardt_Mollard.pdf (3 pages, 13
-5872 bytes).
+5635 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  8 named destinations out of 1000 (max. 500000)
- 14 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

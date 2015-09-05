@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,oneside]{report}
+\documentclass[a4paper,12pt,oneside]{article}
 \usepackage[latin1]{inputenc}
 \usepackage{verbatim} 
 \usepackage{aeguill}
@@ -109,7 +109,7 @@
 \fancyfoot[C]{\footnotesize{- \thepage} -}	
 \fancyfoot[L]{\footnotesize{\Laserbeam\ \textit{ENSIBS - Cyber2}}}	
 %%% Ajouter une fine ligne en haut et en bas
-\renewcommand{\headrulewidth}{3pt}
+%%\renewcommand{\headrulewidth}{3pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
 
@@ -204,26 +204,27 @@
 %%%%%%%%%%%%%%%% Fin des includes... %%%%%%%%%%%%%
 
 \selectlanguage{french}
-\makeindex
-\begin{document}
+%%\makeindex
+\begin{document}\thispagestyle{empty}
 \setlength{\headheight}{33pt} 	% Haut de page
 \setlength{\headsep}{20pt} 	% Entre le haut de page et le texte
 \setlength{\textheight}{950pt} 	% Hauteur de la zone de texte 
-
-%%
+%
 \maketitle
+\thispagestyle{empty}
+
 \pagestyle{plain}
 \renewcommand{\headrulewidth}{0pt}
 
 \setcounter{page}{1} %On definit un compteur a 1
-\pagenumbering{roman} %permet une numérotation en chiffre romain
-\cleardoublepage
-
-
+%\pagenumbering{roman} %permet une numérotation en chiffre romain
+%\cleardoublepage
+%
+%
 \setlength{\headheight}{33pt} 	% Haut de page
 \setlength{\headsep}{40pt} 	% Entre le haut de page et le texte
 \setlength{\textheight}{650pt} 	% Hauteur de la zone de texte 
-
+%
 \setcounter{page}{1} % On réinitialise le coompteur des pages
 \pagenumbering{arabic} % On repasse en numérotation en chiffre Arabe 
 \fancypagestyle{plain}{
@@ -232,7 +233,7 @@
 }
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{3pt}
-
+\newpage
 \input{./source/intro} %% INTRODUCTION
 %\input{./source/GNU} %% Outils de developpement
 %\input{./source/Mesure} %%  ----- TRAVAUX RÉALISÉS
