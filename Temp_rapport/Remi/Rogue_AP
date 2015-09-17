@@ -1,0 +1,160 @@
+Présentation
+
+Notre projet repose sur la mise en place d'un point d'accés frauduleux, plus connu sous le nom anglais de Rogue AP.
+Un rogue access point est un point d'accés sans fils qui à été créée pour permettre à une personne malveillante de procéder à une attaque de type man-in-the-middle.
+Il est complétement transparent pour un utilisateur non avisé et permet de réaliser d'autres attaques tels que :
+
+	-> Injection de virus (trojans / malware / backdoor / ...)
+	-> Redirection vers des sites non voulu par l'utilisateur (Fishing)
+	-> Injection de code par l'intermédiaire de scripts (Keylogguer)
+
+De maniére plus généralisé un rogue ap permet de corrompre l'ensemble des informations circulant entre l'utilisateur connecté et l'internet.
+
+Objectifs l'architecture
+
+L'architecture final à pour objectif de nous placer dans une position dite de l'homme du milieu. Il est important de noter que la mise en place de l'architecture est un point clé dans l'objectif de ce projet. Il va de soit qu'une erreur ou une mauvaise configuration d'un service ou d'un équipement pourrais eveillé le doute chez l'utilisateur piégé.
+
+Partons de l'architecture dont nous voulons corrompre le réseau interne :
+
+%%%%%%%% Ajout du schema de l'etat initial %%%%%%%%%%%
+
+On peut constater dans ce schéma les éléments suivants :
+	
+	-> Un utilisateur utilisant un ordinateur portable ou fixe
+	-> Un modem permettant à l'utilisateur de naviguer sur internet
+	-> Une connection sans fil entre le l'utilisateur et le modem
+
+Afin de bien comprendre la suite de ce projet, ile est nécessaire de prendre en compte les éléments suivants :
+	
+	-> Le modem fournit une adresse IP à l'utilisateur par le biais d'un service DHCP configuré.
+	-> Le modem permet à l'utilisateur de faire la relation entre un nom de domaine et une adresse IP.
+
+Ces deux points sont trés importants car il est nécessaire de répliquer ce fonctionnement dans notre architecture final.
+
+Interessons nous à la mise en place et au fonctionnement de l'architecture final de notre projet. Comme indiqué ci-dessus cette architecture doit coller au plus prés de l'architecture existante chez l'utilisateur cible. Il va donc falloire mettre à disposition de l'utilisateur ciblé les même services que ceux dont ils dispose actuellement.
+
+Ceci induit qu'il faut mettre en palce les services suivant :
+	
+	-> Un modem sans fil pour permettre la connection avec l'utilisateur.
+	-> Un service DHCP pour fournir une adresse IP à l'utilisateur.
+	-> Un service de DNS pour la résolution des noms de domaines.
+
+Il est également nécessaire de forcer l'utilisateur à se connecter sur notre modem.
+Afin de mener à bien cette étape cruciale pour le bon fonctionnement de notre projet, il faut bloquer le modem de l'utilisateur ciblé et le forcer à se connecter à notre modem.
+
+Pour mener à bien toutes ces étapes il est indispensable de disposer :
+
+
+	Des équipements suivants :
+	
+		-> Une carte Wi-Fi pour creer notre modem vérolé
+		-> Une deuxiéme carte Wi-Fi pour lancer les attaques contre le modem de l'utilisateur
+		-> Une troisiéme carte réseau disposant d'un accés à internet
+		-> Un ordinateur sous Linux
+
+	Des outils suivants :
+
+		-> airmon-ng : un outil permettant de passer une carte Wi-Fi en position d'observateur du réseau. (Mode monitoring)
+		-> MDK3 : un outil permettant de saturer un modem Wi-Fi en simulant un nombre important de client voulant se connecter sur le modem.
+		-> airbase-ng : un outil permettant de creer un point d'acces Wi-Fi
+		-> hostapd : un outil permettant de creer un point d'acces Wi-Fi. Contrairement à airbase-ng hostapd offre la possibilitée d'implémenter la fonction WPS.
+
+
+
+Voici l'architecture final à atteindre dans notre projet :
+
+%%%%%%% Inserer image Architecture final %%%%%%%
+
+
+Il est important de noter que cette architecture nous permet de réaliser diverse attaques dont certaines serons présenté dans la suite de ce rapport.
+
+
+% Déploiement de l'architecture
+
+Pour que la victime n'ai pas de soupçon, il est nécessaire de bien préparer toutes les manoeuvres avant de mettre en service notre rogue ap.
+
+Dans un premier temps nous allons mettre en place le DHCP afin de permettre à la victime d'acquérir une adresse IP sur notre réseau. Pour cette étape nous avons utilisé l'outil isc-dhcp-server dans sa version 4.2.4.
+
+Dans un deuxiéme temps nous allons mettre en place le DNS afin de permettre à la victime de continuer à naviguer sur internet. Pour cette étapes nous avons utilisé l'outil bind9 dans sa version 9.9.5.
+
+Detaillons les étapes pour atteindre l'architecture final :
+
+Etape 0 : "Etat du réseau actuel"
+Dans cette étape on peut constater que le client est connecté à son modem.
+
+%% Screen Shot etat du reseaux / Victime connecté à son modem. %%
+
+Etape 1 : "Préparation des commandes de désauthentification et de surcharge du modem de la victime"
+
+%% Screen Shot 4 commandes flood + deauth %%
+
+Etape 2 : "Mise en route du rogue ap"
+
+%% Screen Shot visualisation de l'AP dans le reseau Wifi %%
+
+Etape 3 : "Lancement des commande d'attaques contre la victime et son modem"
+
+%%Screen shot AP HS + Client déconnecté
+
+Etape 4 : "Connection du client à notre rogue ap"
+
+%%Screen shot wireshark de demande de connection du client
+%%Screen shot hostapd_cli preuve demande de conenction
+%%Screen shot wireshark demande de DHCP
+
+Etape 5 : "Architecture ciblé atteinte"
+
+%%Screen shot etat du réseau aprés connection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+Déroulement
+
+

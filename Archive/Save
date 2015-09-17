@@ -1,0 +1,21 @@
+A ce stade d'avancement, il faut preparer les différentes attaques permettant la deconnection de la victime et la mise hors service du modem de la victime. Pour mener à bien ces actions nous avons utilisé les outils suivants :
+
+	-> airmon-ng : un outil permettant de passer une carte Wi-Fi en position d'observateur du réseau. (Mode monitoring)
+	-> MDK3 : un outil permettant de saturer un modem Wi-Fi en simulant un nombre importan de client voulant se connecter sur le modem.
+	-> aireplay-ng : un outil permetant d'injecter des paquets 802.11
+	-> airebase-ng : un outil permettant de creer un point d'acces Wi-Fi
+
+Ces quatres outils serons utilisés de la maniére suivante (commande préparé en avance dans un terminal bash) :
+
+1°) Passage de la carte Wi-Fi d'attaque en mode monitoring (airmon-ng)
+2°) Préparation de la commande de saturation avec mdk3
+3°) Préparation de la commande pour déconnecté la victime de son modem
+4°) Usurpation du modem de la victime avec airebase-ng
+
+Une fois ces quatres commandes préparer, nous pouvons creer notre faux modem Wi-Fi. Pour réaliser cette étape nous avons utilisé hostapd qui est un outil permettant la création d'un point d'acces Wi-Fi. Contrairement à airebase-ng hostapd offre la possibilitée d'implémenter la fonction WPS.
+
+La configuration de hostapd doit être au plus proche de la configuration du modem de la victime :
+
+	-> Le même essid
+	-> Le même chiffrement
+	-> Le même canal de transmission

@@ -1,0 +1,26 @@
+II-A-Keylogger
+1-Présentation
+Un keylogger est un logiciel, un script ou un périphérique premettant de connaitre les séquences de touches frappés sur un ordinateur cible. Ensuite le pirate peut récupérer les données soit directement par le réseau informatique, soit en se rendant sur place.
+L'infrastructure précédente est totalement propice à la mise en place d'un keylogger en Javascript car tous les messages HTTP de la victime transiteront par notre poste. HTTP ayant ses données et clair, on peut modifier librement les messages lorsqu'ils passent dans notre le Rogue AP. 
+
+2-Principe
+La victime envoit ses requêtes HTTP au serveur Web via le Rogue AP. Celui-ci a pare feu configurer pour rediriger les segments TCP en destination du pour 80(HTTP) arrivant sur l'interface relié à la victime, vers un port local où un proxy écoute. Ce proxy retransmette les messages tel quel au serveur web, qui renvoit ses réponses. Au retour, les messages arrivent au port du proxy qui là modifie le corp de la réponse pour injecter un code Javascript de keylogger avant de le renvoyer à la victime. Celui-ci ne verra pas la modification de a page et continuera à naviguer sur internet sans se douter de rien. Pendant ce temps, tout ce qui est écri par l'utilisateur et les pages parcourues sont sauvegardés par le script frauduleux puis envoyés à interval régulier à un serveur mis en place sur le Rogue AP. Celui-ci reçoit toutes ses informations puis les écrit dans un fichier de logs. Ainsi, le pirate peut chercher les informations qui l'intéressent (identifiants, mots de passe, historique de navigation, contenu de mail envoyé).
+
+3-Déployement
+Nous avons utilisé trois outils: sergio-proxy, iptables et un keylogger Javascript/Python que nous avons développé.
+sergio-proxy comme son nom l'indique est un proxy mais qui peut modifier à la volé les réponses HTTP. Nous l'avons choisi pour sa simplicité de mise en place (script Python sans configuration nécessaire).
+iptables est l'interface en ligne de commande pour configurer Netfilter, le pare feu installé basiquement sur les noyaux linux depuis la version 2.x.
+Le keylogger est constitué d'une partie cliente en Javascript et d'une autre serveur en Python.
+
+Le keylogger nécessite quelques paramètres qui sont renseignés soit dans des fichiers de configurations, soit en argument de ligne de commande (port d'écoute du serveur, addresse IP de l'interface relié à la victime, chemin pour le fichier de logs). Nous mettons d'abord en place ces fichiers de configuration. On a écri un script shell de préparation du keylogger, qui permet d'assembler le fichier Javascript qui sera inséré dans les message HTTP. Le port écouté par le serveur n'a aucun importance, nous avons choisi le port 2000 par défaut. Puis nous lançons sergio-proxy en lui demandant d'injecter le keylogger Javascript dans chaque réponse HTTP contenant un document HTML. Le reste du système mis en place, nous créons la règle iptables de redirection du port 80 au port 10000 pour que les messages HTTP soient déviés dans sergio-proxy.
+Côté client, le script enregistre les séquences de frappes dans un buffer qu'il vide toutes les 5 seconds en l'envoyant au serveur Python. Pour éviter que le buffer ne soit pas vide au moment où l'utilisateur change de page, il est automatique envoyé. De plus pour savoir où se trouve l'utilisateur lors des saisis claviers, le keylogger envoie l'URL de la page où il se connecte. Pour que les utilisateurs avertis se mefie moins en regardant le flux HTTP et pour contourner les blocages Cross-Site Scripting, les données sont envoyés sous la forme d'une requête d'image sous la forme favicon.ico?google_azfep=<DONNEES>&q_drt=c. Les fichiers favicon.ico étant automatiquement demandé par le navigateur web et les services étant tellement complexe que peu de gens chercherons ce que signifie ces requêtes (amélioration possible avec des requêtes POST). Sur le Rogue AP, le serveur Python réceptionne les données, les formate puis les sauvegardes dans le fichier de log. Pour éviter que le navigateur renvoie une requête comme il ne reçoit rien, le serveur renvoit une réponse HTTP valide mais vide.
+Pour faciliter le déployement de cette solution, nous avons mis au point deux scripts bash permettant de créer automatiquement les fichiers de configuration, de mettre en place et de passer les bons arguments à chaque scripts appelés.
+
+Ainsi avec cette solution permet de profiter de notre situation de Man In The Middle pour récupérer toutes les données saisies dans un navigateur par la victime.
+
+
+
+Objectifs
+L'objectif principal de ce projet est de pirater une Wi-Fi sécurisée pour se placer en situation de Man In The Middle (MITM) et de mettre en place un échantillon d'attaque possible (Injection de keylogger dans des messages HTTP, blocage sur une fausse page d'administration captive, obtention d'information HTTPS avec SSLstrip).
+Les notions sur lesquelles nous pensions principalement nous enrichir sont le fonctionnement, la manipuation de base Wi-Fi et la configuration serveur (DNS et DHCP).
+Mais en plus de nos premiers objectifs, on s'est tourné vers des attaques portant sur HTTP/HTTPS, ce qui nous a permi de mieux connaitre leur fonctionnement et leur sécurité ainsi que celui des navigateurs web.

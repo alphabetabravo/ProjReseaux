@@ -1,0 +1,57 @@
+1- Introduction
+
+La technologie Wi-Fi est devenue omniprésente de nos jours. Malgrès sa popularité, elle reste cependant assez peu sécurisée, notamment dans les lieux publiques. En effet, les points d'accès (AP) publiques sont généralement non protégés en ces lieux. 
+
+2- Objectifs
+
+Mise en place d'un rogue AP public;
+Mise en place d'un rogue AP privé;
+Utilisations d'outils d'audit de réseaux Wi-Fi;
+Man In The Middle et actions malveillantes.
+
+3- Outils nécessaires
+* Demon pour point d'accès Wi-Fi : hostapd 2.1
+Ce demon proposera un accés Wi-Fi illégitime (rogue AP) en se faisant passer pour un point d'accès connu par la/les victime(s).
+
+* Serveur DHCP : isc-dhcp-server 4.2.4
+Ce serveur doit fournir les services DHCP aux clients se connectant au rogue AP afin qu'ils puissent bénéficier des mêmes services qu'ils ont sur leur point d'accès habituel. La seule différence sera le serveur DNS proposé qui correspondra à notre Man In The Middle.
+
+* Serveur DNS : bind9 9.9.5
+Ce serveur répondra aux requêtes DNS des clients à la place des DNS habituels afin de les rediriger vers nos fausses pages (pishing).
+
+* Outils d'audits et d'injections 802.11 : package aircrack-ng 1.1.6
+Cette suite d'outils nous permettrons d'effectuer diverses actions sur le Wi-Fi :
+	- airmon et airodump : surveillance des points d'accès Wi-Fi à proximités et des clients connectés;
+	- airbase : brouillage du point d'accès ciblé en émettant sur le même canal avec les mêmes SSID et BSSID, ceci afin d'éviter la reconnexion des clients;
+	- aireplay : injection de trames de désauthentification vers les clients du point d'accès ciblé;
+
+* Script d'injections 802.11 : mdk3 v6
+Cet outil se base sur la suite aircrack-ng. Il effectuera un déni de service sur le point d'accès ciblé en l'innondant de requêtes de connexion.
+
+* Serveur proxy : sergioproxy
+Ce serveur proxy injectera du code javascript à la volée dans les pages internet consultées par les clients du rogue AP.
+
+* Script keylogger
+Code javascript (côté client) et Python (côté serveur) renvoyant les actions effectuées au clavier par les clients du rogue AP.
+
+* Logiciel d'analyse de protocoles réseaux : Wireshark
+Ce logiciel permettra d'analyser les échanges réseaux effectués lors du déroulement du projet.
+
+4- Maquette et mise en oeuvre 
+5- Difficultés rencontrées
+6- //points appris
+7- Législation /* comment a-t'on réalisé le rogue légalement */
+8- Conclusion
+
+Lexique :
+BSSID (Basic Service Set Identifier) : identifiant du point d'accès sans fil correspondant à son adresse MAC. Pour communiquer sur un même réseau sans fil, tous les équipements doivent partager le même BSSID.
+SSID (Service Set Identification) : identifiant du point d'accès humainement lisible (contrairement au BSSID).
+
+Références & liens:
+hostapd : disponible sur les dépôts officiels
+isc-dhcp-server : disponible sur les dépôts officiels
+bind9 : disponible sur les dépôts officiels
+aircrack-ng : disponible sur les dépôts officiels
+wireshark : disponible sur les dépôts officiels
+mdk3 : http://aspj.aircrack-ng.org/#mdk3
+sergioproxy : https://github.com/supernothing/sergio-proxy

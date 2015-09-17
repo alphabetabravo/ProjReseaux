@@ -1,0 +1,203 @@
+\documentclass[hyperref={bookmarks=false}]{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage{verbatim}
+\usepackage{aeguill}
+\usepackage{amsfonts}
+\usepackage{xspace}
+\usepackage{amsmath}
+\usepackage{textcomp} 
+\usepackage{cancel} 
+\usepackage{mathcomp} 
+\usepackage{makeidx}
+\usepackage{lscape} % pour avoir une page en paysage
+\usepackage{fancybox}
+\usepackage{shapepar}	% pour les mises en forme de texte (losange etc)
+\usepackage{fancyhdr}
+\usepackage{textcomp}  % pour les caractères spéciaux (copyleft etc)
+\usepackage{marvosym} % caractere electrostatic, laserbeam...
+\usepackage{supertabular}% tableaux sur plusieurs pages
+\usepackage{ifsym} % caractères scpéciaux
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{upgreek}
+%\usepackage{picins}
+%\usepackage{frbib}
+%\usepackage{lastpage}
+\usepackage[english,french]{babel}
+%%%%%%%%%%%%% parallel, multicolpar et parcolumns.%%%%%%%%%%%%%%%%%%%%%% pour des documents multicolones bilingue.
+\usepackage{graphicx, color}
+\usepackage{pdfpages}
+\graphicspath{{img/}} % La ou j'ai mes images
+\DeclareGraphicsExtensions{.jpg,.png}
+\pdfoutput=1
+%\usepackage[pdftex,
+%	a4paper,
+%    bookmarks = true,           % Signets
+%    bookmarksnumbered = true,   % Signets numerotes
+%    pdfpagemode = None,         % Signets/vignettes fermes a l'ouverture
+%    %pdfstartview = FitH,        % La page prend toute la largeur
+%	pdfstartview = FitV,        % La page prend toute la hauteur
+%	colorlinks=true,
+%	citecolor=black,urlcolor=blue,linkcolor=red,
+%	pdfauthor={Rémi Mollard},
+%	pdftitle={overview reseaux},
+% 	pdfsubject={rogueAp},
+%	pdfkeywords={},
+%	plainpages=false,
+%	pdfpagelabels,
+%	bookmarks,
+%	breaklinks=true,
+%   	hyperindex,
+%	linktocpage=true
+%]{hyperref}
+\pdfcompresslevel=9
+%
+%
+%%% style sans serif pour les url
+\urlstyle{sf}
+
+
+
+
+
+%Définition du thème
+\usetheme{default}
+
+% Define some colors:
+\definecolor{DarkFern}{HTML}{407428}
+\definecolor{DarkCharcoal}{HTML}{4D4944}
+\colorlet{Fern}{DarkFern!85!white}
+\colorlet{Charcoal}{DarkCharcoal!85!white}
+\colorlet{LightCharcoal}{Charcoal!50!white}
+\colorlet{AlertColor}{orange!80!black}
+\colorlet{DarkRed}{red!70!black}
+\colorlet{DarkBlue}{blue!70!black}
+\colorlet{DarkGreen}{green!70!black}
+
+% Use the colors:
+\setbeamercolor{title}{fg=Fern}
+\setbeamercolor{frametitle}{fg=Fern}
+\setbeamercolor{normal text}{fg=Charcoal}
+\setbeamercolor{block title}{fg=black,bg=Fern!25!white}
+\setbeamercolor{block body}{fg=black,bg=Fern!25!white}
+\setbeamercolor{alerted text}{fg=AlertColor}
+\setbeamercolor{itemize item}{fg=Charcoal}
+
+
+\begin{document}
+
+\begin{frame}
+		\titlepage
+        \title{Installation et configuration d'un rogue access point}
+        \author{Adrien Couéron, Jérémie Liebhardt, Rémi Mollard, Thomas Gambart}
+        \institute{ENSIBS - Cyberdéfense}
+        \date{Lundi 21 septembre 2015}
+        \logo{}
+        %\includegraphics[height=10mm]{logo-ensibs-horizontal.jpg}
+\end{frame}
+
+\begin{frame}
+		\tableofcontents[pausesections]
+\end{frame}
+
+\begin{frame}
+		\tableofcontents[hideothersubsections]
+\end{frame}
+
+\section{Objectifs prévus}
+
+\begin{frame}
+		\tableofcontents[hideothersubsections]
+\end{frame}
+
+\begin{frame}
+        \frametitle{Objectifs prévus dans notre Overview}
+        Création d'un point d'accès à l'aide de l'outil airbase-ng
+		Mise en place d'un serveur DHCP pour les clients
+		Mise en place d'un serveur DNS pour rediriger certaines demandes (Facebook,maBanque, Gmail...) vers un site piégé.
+		Mise en place d'une procédure d'Hameçonnage pour récupérer la clé Wi-Fi de la vrai borne Wi-Fi ciblé
+\end{frame}
+
+
+\section{Objectifs non atteints}
+
+
+\begin{frame}
+		\tableofcontents[hideothersubsections]
+\end{frame}
+
+
+
+
+\section{Objectifs atteints}
+
+\begin{frame}
+		\tableofcontents[hideothersubsections]
+\end{frame}
+
+
+\subsection{Fake base en utilisant airebase-ng}
+\begin{frame}
+        \frametitle{Fake AP en utilisant airebase-ng}
+\end{frame}
+
+\subsection{Rogue AP}
+\begin{frame}
+        \frametitle{Rogue AP}
+        Configuration du hotspot avec hostap(d?)
+        	Création d'un hotspot avec la même sécurité que l'AP ciblé
+        	Une fois le client connecté, identification grâce au WPS
+        	Une fois le client connecté, il reste connecté sur la borne même si l'attaque s'arrête
+        
+        Limite de la solution :
+        	La connexion doit être initié par l'ordinateur cible
+\end{frame}
+
+\subsection{Intégration routage internet}
+\begin{frame}
+        \frametitle{Intégration routage internet}
+\end{frame}
+
+\subsection{Man In The Middle}
+\begin{frame}
+        \frametitle{Man In The Middle}
+\end{frame}
+
+\subsection{Faux sites}
+\begin{frame}
+        \frametitle{Mise en place de faux site}
+\end{frame}
+
+\subsection{Keylogger en javascript et python}
+\begin{frame}
+        \frametitle{Keylogger en javascript et python}
+\end{frame}
+
+\subsection{Extension aka chose possible}
+\begin{frame}
+        \frametitle{Extension aka chose possible}
+\end{frame}
+
+
+
+\section{Légalité}
+\begin{frame}
+        \frametitle{Légalité des opérations}
+        cadre et limites
+        Comment en respecter le cadre légal ?
+\end{frame}
+
+
+\section{Conclusion}
+\begin{frame}
+        \frametitle{Conclusion}
+\end{frame}
+
+\section{Questions ?}
+\begin{frame}
+        \frametitle{Merci de votre écoute}
+        Nous sommes ouverts à toutes vos questions.
+\end{frame}
+
+\end{document}
